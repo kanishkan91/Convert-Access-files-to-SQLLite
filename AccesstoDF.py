@@ -1,9 +1,28 @@
-import pyodbc
-import pandas as pd
+#import pyodbc
+#import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
-import sqlite3
+#import sqlite3
+import pip
 ...
+
+
+def install(package):
+    if hasattr(pip, 'main'):
+        pip.main(['install', package])
+    else:
+        from pip._internal import main as pip2
+        pip2(['install', package])
+
+install('pydobc')
+install('sqlite3')
+install('pandas')
+
+import pyodbc
+import pandas as pd
+import sqlite3
+
+
 
 #Read in mdb file here
 db_file2 = r'C:\Users\Public\Rfiles\IFsForDyadic.mdb'
